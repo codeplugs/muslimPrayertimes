@@ -43,7 +43,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         //android_asset不加s
-        wv.loadUrl("https://muslim-prayertimes.vercel.app/");
+        //wv.loadUrl("https://muslim-prayertimes.vercel.app/");
+        wv.loadUrl("file:///android_asset/index.html");
+
         //加上這個就可以開檔案，因為android 8以後有改strictMode，不能直接用file:///開檔案，要用fileprovider來做
         StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
         StrictMode.setVmPolicy(builder.build());
